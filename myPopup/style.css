@@ -1,0 +1,99 @@
+:root {
+    --myColor: #e26e70;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Times New Roman', Times, serif;
+    /* overflow: hidden; */
+    background-image: linear-gradient(45deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 50%, rgb(255, 204, 112) 100%);
+}
+
+.btn-open {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 40px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.popup {
+    top: 0;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.table {
+    top: 30%;
+    margin: auto;
+    width: 400px;
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    animation: showTable 0.3s linear;
+}
+
+.table .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px;
+    background-color: var(--myColor);
+    color: white;
+    font-size: 20px;
+}
+
+.table .header i {
+    cursor: pointer;
+}
+
+.table .body {
+    margin: 20px 15px;
+}
+
+.table .body h3 {
+    margin: 0px 0 10px;
+    font-size: 25px;
+    color: var(--myColor);
+}
+
+.table .footer {
+    padding: 20px;
+    text-align: right;
+}
+
+.footer button {
+    padding: 10px;
+    background-color: var(--myColor);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+@keyframes showTable {
+    from {
+        opacity: 0;
+        top: -200px;
+    } to {
+        top: 30%;
+        opacity: 1;
+    }
+}
